@@ -1,0 +1,30 @@
+
+import java.sql.*;
+
+import com.mysql.jdbc.*;
+import com.mysql.jdbc.Connection;
+
+public class Stud 
+{
+	public static void main(String[] args) throws Exception
+	{
+		// TODO Auto-generated method stub
+        Class.forName("com.mysql.jdbc.Driver");
+		Connection con= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Sample","root","password");
+		java.sql.Statement st= con.createStatement();
+		try{
+			
+		
+	//	String cr_table=;
+		st.execute("create table Student(id int(3) primary key,name varchar(20),classs varchar(10),marks int(3)");
+		System.out.println("Table is created");
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		st.close();
+		con.close();
+	}
+
+}

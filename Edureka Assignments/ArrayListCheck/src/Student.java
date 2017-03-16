@@ -1,0 +1,34 @@
+package com.appdirect;
+
+import java.util.ArrayList;
+class Student1 
+{ int id;
+String name;
+ double sal;
+	  
+	Student1(int id,String name,double sal )
+	{
+		this.id=id;
+				this.name=name;
+				this.sal=sal;
+	}
+}
+
+public class Student {
+
+	public static void main(String args[])
+	{
+		ArrayList<Student1> emp=new ArrayList<Student1>();
+		Student1 emp1=new Student1(101,"Abc",123.45);
+		Student1 emp2=new Student1(102,"Def",323.45);
+		Student1 emp3=new Student1(103,"Ghi",423.45);
+		
+		
+		emp.add(emp1);
+		emp.add(emp2);
+		emp.add(emp3);
+		System.out.println(emp);
+		
+	}
+	
+}

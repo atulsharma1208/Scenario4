@@ -1,0 +1,20 @@
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+public class Stud {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException{
+		// TODO Auto-generated method stub
+        Class.forName("com.mysql.jdbc.Driver");
+		Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/Sample","root","password");
+		Statement st=(Statement) con.createStatement();
+		String cr_table="Create table Student(id int(3) primary key,name varhar(20),class varchar(10),marks int(3)";
+		st.execute(cr_table);
+		st.close();
+		con.close();
+	}
+
+}
